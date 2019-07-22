@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import App from './components/App';
 
-
 const rootElement = document.getElementById('react');    
 ReactDOM.render(<App/>, rootElement);
 
