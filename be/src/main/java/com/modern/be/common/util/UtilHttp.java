@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -77,6 +78,27 @@ public class UtilHttp {
 	}
 	
 	/**
+	 * GET 방식으로 접속한 결과를 리턴함. 
+	 * @param baseUrl
+	 * @param param
+	 * @return
+	 */
+	public static Map<String, Object> getMap(String baseUrl, HttpEntity<MultiValueMap<String, String>> httpEntityWithHeade) {
+		
+		RestTemplate rest = new RestTemplate(); 
+		
+		@SuppressWarnings("rawtypes")
+		ResponseEntity<Map> reMap = rest.exchange(baseUrl, HttpMethod.GET, httpEntityWithHeade, Map.class);
+		
+		log.debug("GET결과 status:{}, body:{}", reMap.getStatusCode(), reMap.getBody());
+		
+		@SuppressWarnings("unchecked")
+		Map<String, Object> mapResult =  reMap.getBody();
+		
+		return mapResult;
+	}
+	
+	/**
 	 * 
 	 * url 을 POST방식으로 접속하여 결과를 리턴함. 
 	 * 참고 https://aramk.tistory.com/33  
@@ -123,6 +145,7 @@ public class UtilHttp {
 		MultiValueMap<String, String> parameters = new LinkedMultiValueMap<String, String>(); 
 		
 		HttpHeaders headers = new HttpHeaders(); 
+		
 		//headers.add("x-waple-authorization",  "API키값");
 		for(Entry<String, String> m : param.entrySet()) {
 			headers.add(m.getKey(), m.getValue());
@@ -133,6 +156,27 @@ public class UtilHttp {
 		log.debug("HTTP POST header:{}", request.getHeaders().toSingleValueMap());
 		
 		return postMap(baseUrl, request); 
+	}
+	
+	/**
+	 * header에 파라미터를 추가해서 Get 결과를 리턴함. 
+	 * @param baseUrl
+	 * @param param
+	 * @return
+	 */
+	public static Map<String, Object> getHeader(String baseUrl, Map<String, String> param) {
+		
+		MultiValueMap<String, String> parameters = new LinkedMultiValueMap<String, String>(); 
+		
+		HttpHeaders headers = new HttpHeaders(); 
+		for(Entry<String, String> m : param.entrySet()) {
+			headers.add(m.getKey(), m.getValue());
+		}
+		
+		HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<MultiValueMap<String, String>>(parameters, headers);
+		log.info("HTTP Get header:{}", request.getHeaders().toSingleValueMap());
+		
+		return getMap(baseUrl, request); 
 	}
 
 	
