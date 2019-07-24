@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 @Builder
-@ConfigurationProperties("restapi.appkey")
+@ConfigurationProperties(prefix = "restapi.appkey")
 public class RestApi {
 	
 	private String kakao;

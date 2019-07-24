@@ -22,18 +22,19 @@ module.exports = {
     publicPath: "/assets/",
     contentBase: './tmp',
     proxy: {
-      "**": "http://localhost:8080"
+      "**": "http://localhost:8085"
     }
   },
   module: {
     rules: [{
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
-        use: {
+		use: {
           loader: 'babel-loader',
           options: {
             cacheDirectory: true,
-            presets: ['env', 'react'],
+            presets: ["@babel/preset-react","@babel/preset-env"],
+			plugins: [["@babel/plugin-proposal-class-properties", { "loose": true }]]
           }
         }
       },

@@ -1,6 +1,6 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'C:\\Users\\user\\git\\repository\\springbootReact\\fe\\node\\node.exe',
-1 verbose cli   'C:\\Users\\user\\git\\repository\\springbootReact\\fe\\node\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli [ 'D:\\git\\springbootReact\\fe\\node\\node.exe',
+1 verbose cli   'D:\\git\\springbootReact\\fe\\node\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'run',
 1 verbose cli   'build' ]
 2 info using npm@3.9.2
@@ -10,25 +10,25 @@
 6 silly lifecycle fe@0.0.1-SNAPSHOT~prebuild: no script for prebuild, continuing
 7 info lifecycle fe@0.0.1-SNAPSHOT~build: fe@0.0.1-SNAPSHOT
 8 verbose lifecycle fe@0.0.1-SNAPSHOT~build: unsafe-perm in lifecycle true
-9 verbose lifecycle fe@0.0.1-SNAPSHOT~build: PATH: C:\Users\user\git\repository\springbootReact\fe\node\node_modules\npm\bin\node-gyp-bin;C:\Users\user\git\repository\springbootReact\fe\node_modules\.bin;C:\Users\user\git\repository\springbootReact\fe\node;C:\Users\user\git\repository\springbootReact\fe\node;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\app\user\product\11.2.0\client_1\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\AppData\Local\atom\bin;C:\Users\user\AppData\Local\Programs\Fiddler;C:\Users\user\AppData\Roaming\npm;
-10 verbose lifecycle fe@0.0.1-SNAPSHOT~build: CWD: C:\Users\user\git\repository\springbootReact\fe
+9 verbose lifecycle fe@0.0.1-SNAPSHOT~build: PATH: D:\git\springbootReact\fe\node\node_modules\npm\bin\node-gyp-bin;D:\git\springbootReact\fe\node_modules\.bin;D:\git\springbootReact\fe\node;D:\git\springbootReact\fe\node;C:/Program Files/Java/jre1.8.0_221/bin/server;C:/Program Files/Java/jre1.8.0_221/bin;C:/Program Files/Java/jre1.8.0_221/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs\;C:\Users\Hyun\AppData\Roaming\npm;D:\sts-4.3.1.RELEASE;;
+10 verbose lifecycle fe@0.0.1-SNAPSHOT~build: CWD: D:\git\springbootReact\fe
 11 silly lifecycle fe@0.0.1-SNAPSHOT~build: Args: [ '/d /s /c', 'webpack' ]
 12 silly lifecycle fe@0.0.1-SNAPSHOT~build: Returned: code: 2  signal: null
 13 info lifecycle fe@0.0.1-SNAPSHOT~build: Failed to exec build script
 14 verbose stack Error: fe@0.0.1-SNAPSHOT build: `webpack`
 14 verbose stack Exit status 2
-14 verbose stack     at EventEmitter.<anonymous> (C:\Users\user\git\repository\springbootReact\fe\node\node_modules\npm\lib\utils\lifecycle.js:245:16)
+14 verbose stack     at EventEmitter.<anonymous> (D:\git\springbootReact\fe\node\node_modules\npm\lib\utils\lifecycle.js:245:16)
 14 verbose stack     at emitTwo (events.js:87:13)
 14 verbose stack     at EventEmitter.emit (events.js:172:7)
-14 verbose stack     at ChildProcess.<anonymous> (C:\Users\user\git\repository\springbootReact\fe\node\node_modules\npm\lib\utils\spawn.js:24:14)
+14 verbose stack     at ChildProcess.<anonymous> (D:\git\springbootReact\fe\node\node_modules\npm\lib\utils\spawn.js:24:14)
 14 verbose stack     at emitTwo (events.js:87:13)
 14 verbose stack     at ChildProcess.emit (events.js:172:7)
 14 verbose stack     at maybeClose (internal/child_process.js:827:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
 15 verbose pkgid fe@0.0.1-SNAPSHOT
-16 verbose cwd C:\Users\user\git\repository\springbootReact\fe
-17 error Windows_NT 10.0.17134
-18 error argv "C:\\Users\\user\\git\\repository\\springbootReact\\fe\\node\\node.exe" "C:\\Users\\user\\git\\repository\\springbootReact\\fe\\node\\node_modules\\npm\\bin\\npm-cli.js" "run" "build"
+16 verbose cwd D:\git\springbootReact\fe
+17 error Windows_NT 6.1.7601
+18 error argv "D:\\git\\springbootReact\\fe\\node\\node.exe" "D:\\git\\springbootReact\\fe\\node\\node_modules\\npm\\bin\\npm-cli.js" "run" "build"
 19 error node v4.4.5
 20 error npm  v3.9.2
 21 error code ELIFECYCLE
