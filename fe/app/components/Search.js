@@ -44,12 +44,8 @@ class Search extends Component{
 		.catch(function(error){
 			console.log(error);
 		});
-
-		console.log(list.meta);
 	}
 	render(){
-		console.log("##################### : " + this.state.documents.length);
-		console.log("##################### : " + this.state.meta);
 		return(
 			<div className="container">
 				<div className="row">
@@ -67,38 +63,34 @@ class Search extends Component{
 						</div>
 					</div>
 				</div>
-				<div className="row">
-					{this.state.documents.map((book, i) => {
-						return (
-							<BookList
-								key={i}
-								contents={book.contents}
-								authors={book.authors}
-								datetime={book.datetime}
-								isbn={book.isbn}
-								publisher={book.publisher}
-								sale_price={book.sale_price}
-								status={book.status}
-								thumbnail={book.thumbnail}
-								title={book.title}
-								translators={book.translators}
-								url={book.url}
-							/>								
-						)
-					})}				
-					{this.state.meta.map((info, i) => {
-						return (
-							<Pagination 
-								isEnd = {info.is_end}
-								pageableCount= {info.pageable_count}
-								totalCount = {info.total_count}
-							/>
-						)
-					})}	
-				</div>
+				{this.state.documents.map((book, i) => {
+					return (
+						<BookList
+							key={i}
+							contents={book.contents}
+							authors={book.authors}
+							datetime={book.datetime}
+							isbn={book.isbn}
+							publisher={book.publisher}
+							price={book.price}
+							sale_price={book.sale_price}
+							status={book.status}
+							thumbnail={book.thumbnail}
+							title={book.title}
+							translators={book.translators}
+							url={book.url}
+						/>								
+					)
+				})}				
+				<Pagination 
+					isEnd = {this.state.meta.is_end}
+					pageableCount= {this.state.meta.pageable_count}
+					totalCount = {this.state.meta.total_count}
+				/>
 			</div>
 		);
 	}	
 }
+
 
 export default Search;

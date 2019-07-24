@@ -30,6 +30,10 @@ public class BookController {
 		// 파라미터 받아오기..
 		
 		String keyword = request.getParameter("keyword");
+		String sort = request.getParameter("keyword");
+		String page = request.getParameter("keyword");
+		String size = request.getParameter("keyword");
+		String target = request.getParameter("keyword");
 		
 		Map<String, String> queryParam = new HashMap<String, String>();
 		queryParam.put("query", keyword);
